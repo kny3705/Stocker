@@ -1,0 +1,82 @@
+/* reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+img {
+    width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* common */
+
+/* header */
+header {
+    background-color: #ee8989b6;
+    padding: 10px 20px;
+    /* margin-bottom: 50px; */
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+}
+/* main */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* padding-top: 50px; */
+    margin-top: 50px;
+}
+
+main a {
+    position: relative;
+    /* width: 32vw; */
+    /* width: 32% */
+    flex-basis: 32vw; /* width 중에서 젤 우선*/
+    margin-bottom: 2vw;
+}
+
+main a img {
+    height: calc(30vw * .75);
+    object-fit: cover;
+    /* object-position: bottom; default 값이 center */
+}
+
+main a div {
+    display: flex;
+    /* display: none; */
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    padding: 10px 15px;
+    width: 100%;
+    background: rgba(255, 255, 255, .6);
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    opacity: 0;
+    transition: opacity .2s;
+}
+
+main a:hover>div {
+    /* display: flex; */
+    opacity: 1;
+}
+
+
+
+/* main a {
+    display: inline-block;
+    width: 30%;
+} */
+
+/* footer */
