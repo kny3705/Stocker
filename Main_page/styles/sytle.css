@@ -4,9 +4,6 @@
     margin: 0;
     box-sizing: border-box;
 }
-body {
-    margin: 0;
-}
 img {
     width: 100%;
 }
@@ -20,59 +17,121 @@ a {
 
 /* header */
 header {
-    background-color: #ee8989b6;
-    padding: 10px 20px;
+    background-color: #2d4059;
+    color: #fff;
+    padding: 20px;
     /* margin-bottom: 50px; */
 }
 
 header h1 {
-    margin: 0;
     text-align: center;
 }
 /* main */
 main {
+    position: relative;
+}
+#container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    /* padding-top: 50px; */
-    margin-top: 50px;
+    justify-content: space-around;
+    /* padding-top: 30px; */
+    margin-top: 30px;
 }
 
-main a {
+.item {
     position: relative;
     /* width: 32vw; */
     /* width: 32% */
-    flex-basis: 32vw; /* width 중에서 젤 우선*/
-    margin-bottom: 2vw;
+    flex-basis: 30vw; /* width 중에서 젤 우선*/
+    margin-bottom: 3vw;
+    cursor: pointer;
 }
 
-main a img {
+.item img {
     height: calc(30vw * .75);
     object-fit: cover;
     /* object-position: bottom; default 값이 center */
 }
 
-main a div {
-    display: flex;
+.item div {
+    /* display: flex; */
     /* display: none; */
-    justify-content: space-between;
+    /* justify-content: space-between; */
     position: absolute;
     bottom: 0;
-    padding: 10px 15px;
+    padding: 10px;
     width: 100%;
     background: rgba(255, 255, 255, .6);
-    font-size: 1.4rem;
+    /* font-size: 1.4rem; */
     text-transform: capitalize;
     opacity: 0;
-    transition: opacity .2s;
+    transition: all .2s;
 }
 
-main a:hover>div {
+.item:hover div {
     /* display: flex; */
     opacity: 1;
 }
 
+/* main > modal */
+#modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, .7);
+}
 
+/* #modal.show {
+    display: flex;
+} */
+
+#modal.hide {
+    display: none;
+}
+
+#modal_inner {
+    background: #fff;
+    width: 80vw;
+    height: 90vh;
+    padding: 30px;
+    overflow-y: scroll;
+}
+
+#modal_inner::-webkit-scrollbar {
+    display: none;
+}
+
+#modal_inner > * {
+    display: block;
+    margin-bottom: 20px;
+}
+
+#modal_inner img {
+    max-height: 94%;
+    object-fit: contain;
+}
+
+/* footer {
+    position: relative;
+} */
+
+#bttbtn {
+    position: fixed;
+    bottom: 10px;
+    right: 30px;
+    background-color: #ea5455;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+}
 
 /* main a {
     display: inline-block;
